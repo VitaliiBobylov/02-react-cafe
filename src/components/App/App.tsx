@@ -1,8 +1,8 @@
 import css from "./app.module.css";
-import CafeInfo from "./CafeInfo";
+import CafeInfo from "../Cafeinfo/CafeInfo";
 import { useState } from "react";
-import type { Votes, VoteType } from "./components/types/votes";
-import VoteOptions from "./voteOptions";
+import type { Votes, VoteType } from "../types/votes";
+import VoteOptions from "../voteOptions/voteOptions";
 
 function App() {
   const [votes, setVotes] = useState<Votes>({
@@ -25,6 +25,8 @@ function App() {
       good: 0,
       neutral: 0,
       bad: 0,
+      total: 0,
+      positive: 0,
     });
   };
 
@@ -34,6 +36,7 @@ function App() {
         title="Sip Happens Café"
         description="Please rate our service by selecting one of the options below."
       />
+
       <VoteOptions onVote={handleVote} onReset={resetVotes} canReset={true} />
 
       <div>
