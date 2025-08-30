@@ -1,5 +1,5 @@
 import css from "./App.module.css";
-import CafeInfo from "../Cafeinfo/Cafeinfo";
+import CafeInfo from "../CafeInfo/drgdr";
 import { useState } from "react";
 import type { Votes, VoteType } from "../../types/votes";
 import VoteOption from "../VoteOption/VoteOption";
