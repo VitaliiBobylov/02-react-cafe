@@ -1,4 +1,4 @@
-import css from "./CafeInfo.module.css";
+import css from "./Cafeinfo.module.css";
 
 interface CafeInfoProps {
   title: string;
