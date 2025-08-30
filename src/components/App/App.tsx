@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Votes, VoteType } from "../../types/votes";
 import VoteOption from "../VoteOption/VoteOption";
 import VoteStats from "../VoteStats/VoteStats";
+import Notification from "../Notification/Notification";
 
 function App() {
   const [votes, setVotes] = useState<Votes>({
@@ -44,11 +45,15 @@ function App() {
         canReset={totalVotes > 0}
       />
 
-      <VoteStats
-        votes={votes}
-        totalVotes={totalVotes}
-        positiveRate={positiveRate}
-      />
+      {totalVotes > 0 ? (
+        <VoteStats
+          votes={votes}
+          totalVotes={totalVotes}
+          positiveRate={positiveRate}
+        />
+      ) : (
+        <Notification />
+      )}
     </div>
   );
 }
