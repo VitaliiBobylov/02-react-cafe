@@ -30,7 +30,7 @@ export default function VoteStats({
         Total: <strong>{totalVotes}</strong>
       </p>
       <p className={css.stat}>
-        Positive: <strong>{positiveRate}%</strong>вапрвапрвапше
+        Positive: <strong>{positiveRate}%</strong>
       </p>
     </div>
   );
